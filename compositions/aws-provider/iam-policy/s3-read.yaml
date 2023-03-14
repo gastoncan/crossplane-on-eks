@@ -4,7 +4,7 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: read-s3.iampolicy.awsblueprints.io
+  name: read-s3.xiampolicy.awsblueprints.io
   labels:
     iam.awsblueprints.io/policy-type: read
     iam.awsblueprints.io/service: s3-bucket
@@ -13,7 +13,7 @@ spec:
   writeConnectionSecretsToNamespace: crossplane-system
   compositeTypeRef:
     apiVersion: awsblueprints.io/v1alpha1
-    kind: IAMPolicy
+    kind: XIAMPolicy
   patchSets:
     - name: common-fields
       patches:

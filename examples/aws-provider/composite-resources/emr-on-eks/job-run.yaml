@@ -26,6 +26,6 @@ spec:
   permissionsBoundaryArn: arn:aws:iam::1234567:policy/crossplaneBoundary # optional.
   jobParams:
     # must be s3.
-    sparkEntryPoint: s3://us-west-2.elasticmapreduce/emr-containers/samples/wordcount/scripts/wordcount.py # This is an example script available to the public.
+    sparkEntryPoint: s3://us-west-2.elasticmapreduce/emr-containers/samples/wordcount/scripts/wordcount.py # This is an example script available to the public. Note that the region in this example endpoint must be the same as the region the EMR Job pods run on EKS.
     sparkSubmitParameters: "--conf spark.executor.instances=2 --conf spark.executor.memory=1G --conf spark.executor.cores=1 --conf spark.driver.cores=1"
     virtualClusterId: "i335bgltdcjhlfbkak5120202" # Change me
